@@ -1,6 +1,3 @@
-!-- ============================================================ -->
-<!-- FILE: css/style.css (Foglio di Stile Comune)                 -->
-<!-- ============================================================ -->
 <style>
 /* --- GLOBAL STYLES & COLOR PALETTE --- */
 :root {
@@ -128,3 +125,199 @@ section {
 .main-nav a:hover, .main-nav a.active {
     color: var(--electric-cyan);
 }
+
+
+/* --- SEZIONI GENERICHE E BOTTONI --- */
+.hero-section, .page-hero-section {
+    padding-top: 200px;
+    padding-bottom: 150px;
+    text-align: center;
+    background-color: rgba(37, 43, 66, 0.5);
+}
+.page-hero-section {
+    padding-top: 180px;
+    padding-bottom: 120px;
+}
+
+.subtitle {
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+    font-size: 1.2rem;
+    color: rgba(244, 244, 244, 0.85);
+}
+
+.highlight-aqua { color: var(--aqua-mint); }
+.highlight-green { color: var(--lime-green); }
+.highlight-cyan { color: var(--electric-cyan); }
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--electric-cyan);
+    color: var(--text-dark);
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(54, 215, 217, 0.3);
+}
+
+.btn-secondary {
+    border-color: var(--electric-cyan);
+    color: var(--electric-cyan);
+}
+
+.btn-secondary:hover {
+    background-color: var(--electric-cyan);
+    color: var(--text-dark);
+    transform: translateY(-5px);
+}
+
+.problem-section, .differentiators-section {
+    background-color: rgba(0,0,0,0.2);
+}
+.problem-section .container { max-width: 800px; text-align: center; }
+.problem-section p { color: var(--slate-gray); font-size: 1.2rem; }
+
+.solutions-section .container, .differentiator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.solution-box, .differentiator-item {
+    background-color: var(--background-section);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(115, 123, 140, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.solution-box:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.solution-box { text-align: center; }
+.solution-icon { width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 25px auto; }
+.icon-cyan { background-color: var(--electric-cyan); }
+.icon-aqua { background-color: var(--aqua-mint); }
+.icon-green { background-color: var(--lime-green); }
+
+.differentiator-item { border-left: 5px solid var(--slate-gray); }
+.differentiator-item:nth-child(1) { border-color: var(--electric-cyan); }
+.differentiator-item:nth-child(2) { border-color: var(--aqua-mint); }
+.differentiator-item:nth-child(3) { border-color: var(--lime-green); }
+.differentiator-item p { color: var(--slate-gray); }
+
+.final-cta-section {
+    background: linear-gradient(45deg, var(--electric-cyan), var(--aqua-mint));
+    text-align: center;
+}
+.final-cta-section h2, .final-cta-section p { color: var(--dark-navy); }
+.final-cta-section p { max-width: 600px; margin: 0 auto 30px auto; }
+.final-cta-section .btn-primary {
+    background-color: var(--dark-navy);
+    color: var(--text-light);
+    border-color: var(--dark-navy);
+}
+.final-cta-section .btn-primary:hover {
+    background-color: var(--text-light);
+    color: var(--dark-navy);
+    border-color: var(--dark-navy);
+    box-shadow: 0 8px 20px rgba(37, 43, 66, 0.3);
+}
+
+
+/* --- STILI PAGINE INTERNE --- */
+.content-section {
+    background-color: rgba(0,0,0,0.2);
+}
+.solution-detailed-box, .case-study-box {
+    background-color: var(--background-section);
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+.solution-detailed-box .solution-icon { margin: 0 0 20px 0; }
+.target-audience { color: var(--slate-gray); font-style: italic; margin-bottom: 1.5rem; }
+
+.about-us-content { display: flex; gap: 40px; align-items: center; }
+.about-us-text { flex: 1; }
+.about-us-image img { max-width: 100%; border-radius: 12px; }
+
+.case-study-box h3 { font-size: 2rem; }
+.case-study-profile { color: var(--slate-gray); margin-bottom: 2rem; }
+.results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 2rem; text-align: center; }
+.result-item { background-color: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px; }
+.result-value { display: block; font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+.result-label { color: var(--slate-gray); }
+
+.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
+.testimonial-box { background-color: var(--background-section); padding: 30px; border-radius: 12px; border-left: 5px solid var(--electric-cyan); }
+.testimonial-text { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; }
+.testimonial-author { text-align: right; font-weight: 600; color: var(--aqua-mint); }
+
+.contact-container { display: flex; gap: 50px; }
+.contact-form-wrapper { flex: 2; }
+.contact-info-wrapper { flex: 1; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 5px; color: var(--slate-gray); }
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--slate-gray);
+    background-color: var(--dark-navy);
+    color: var(--text-light);
+    font-size: 1rem;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--electric-cyan);
+    box-shadow: 0 0 0 3px rgba(54, 215, 217, 0.3);
+}
+.contact-info-item { margin-bottom: 30px; }
+.contact-info-item a { color: var(--electric-cyan); text-decoration: none; }
+
+
+/* --- FOOTER --- */
+.main-footer {
+    background-color: #1c2135;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--slate-gray);
+}
+.main-footer a { color: var(--slate-gray); text-decoration: none; transition: color 0.3s ease; }
+.main-footer a:hover { color: var(--electric-cyan); }
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+    .about-us-content, .contact-container { flex-direction: column; }
+}
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    section { padding: 60px 0; }
+    
+    .main-header .container { flex-direction: column; gap: 15px; }
+    .main-nav ul { flex-wrap: wrap; justify-content: center; padding: 0; }
+    .main-nav li { margin: 5px 10px; }
+    
+    .hero-section, .page-hero-section { padding-top: 180px; padding-bottom: 100px; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+}
+
+</style>
